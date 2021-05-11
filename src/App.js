@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+ import './App.css';
+import PieChart from "./components/charts/pieChart/PieChart";
+import LineChart from "./components/charts/lineChart/LineChart";
+import DoughnutChart from "./components/charts/doughnutChart/DoughnutChart";
+import BarChart from "./components/charts/barChart/BarChart";
+ import DataJson from '/../components/testJson.json'
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+
+    return (
+        <div className="App">
+            <PieChart/>
+            <LineChart data={DataJson}/>
+            <DoughnutChart/>
+            <BarChart/>
+        </div>
+    );
 }
 
 export default App;
